@@ -24,12 +24,6 @@ const App = () => {
   const URL = `https://newsapi.org/v2/everything?q=${search}&to=${todaysDate.current}&language=${language}&pageSize=50&sortBy=popularity&page=1&apiKey=${API_KEY}`;
 
   useEffect(() => {
-    // setData({
-    //   results: null,
-    //   loading: true,
-    //   error: null,
-    // });
-
     fetch(URL)
       .then((response) => response.json())
       .then((results) => setData({ results, loading: false, error: null }))
